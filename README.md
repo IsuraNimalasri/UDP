@@ -11,6 +11,8 @@ Master spider can create golden recodes which are Business and markeing team loo
 
 #### Worker Spider 
 There are multiple number of woker spiders in unders the single sourse. The are doing diffrent jobs using metadata.
+There are multiple websites can be source for our scraping engine.each web site has desicated master spider for crawling web data.
+This master spider create metadata file for all workers. 
 
 
 ## Golden Records 
@@ -19,6 +21,7 @@ There are multiple number of woker spiders in unders the single sourse. The are 
 
 ```
 {
+"id":UUID_1
 "region":"uk",
 "type":"univerity",
 "display_name":"Univeristy of ABC",
@@ -35,12 +38,33 @@ There are multiple number of woker spiders in unders the single sourse. The are 
 }
 ```
 
+### Courcses
+
+```{
+"id":UUID_2,
+"type":"cources",
+"region":"uk",
+"name":"coputer_science",
+"display_name":"Computer Science",
+"duration":{  
+"y":1,
+"m":6,
+"d":0
+},
+"fee":"",
+"currency":"eur",
+"deparment":"computing",
+"dpt_code":"",
+"cources_code":"cs12391",
+"univeristy_id": "UUID_1",
+"courcse_url":"http://exsample.com/cources/cs12391",
+"cources_type":"Bsc",
+"mode_of_study":"full_time"
+}```
 
 
 
 
 
 
-There are multiple websites can be source for our scraping engine.each web site has desicated master spider for crawling web data.
 
-This master spider create metadata file for all workers. 
