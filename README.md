@@ -1,5 +1,6 @@
 # University Data Pipeline (UDP 1.0 )
 
+![pipeline]()
 
 This is very basic concept , I try to do. When we go through the diagram data flow start from sourcee where is our data scrapying form. Whe we come to scrapying area we create some logical grouping for spiders. each source has two type of spiders. 
 
