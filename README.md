@@ -2,21 +2,29 @@
 
 ![pipeline](/Pipeline.jpg)
 
-This is very basic concept , I try to do. When we go through the diagram data flow start from sourcee where is our data scrapying form. Whe we come to scrapying area we create some logical grouping for spiders. each source has two type of spiders. 
+This diagram represents the high-level architecture of University Data Pipelines. The selected sample consists of UK University information.
 
-- master spider (one per sources)
-- worker spider (multiple number of worker per sources)
+Starting from the Left-hand side; the diagram describes data sources or websites, which store information of universities.
 
-#### Master Spider 
+The second step is scraping of data by “Scrapy Engine”. 
 
-Master spider can create golden recodes which are Business and markeing team looking data. And also master spider should create metadata for workers.
+There are two types of spiders (“spider” is a scrapy term used to describe a web scraping module) which associate with the source; “Master Spider” and “Worker Spider”. 
 
-#### Worker Spider 
+##### Master Spider: Create metadata for worker spiders
 
-There are multiple number of woker spiders in unders the single sourse. The are doing diffrent jobs using metadata.
-There are multiple websites can be source for our scraping engine.each web site has desicated master spider for crawling web data.
-This master spider create metadata file for all workers. 
+##### Worker Spider: Create golden records 
 
+#### Golden Records
+This refers to the output of the pipeline, which helps to achieve business and marketing goals. There are two types of golden records introducing in this sample.
+- University: describe the university for business and marketing purpose
+- Courses: describe the course details for business and marketing purpose
+
+Main reasons for introducing MongoDB as a Golden Record store are; 
+	The Golden Records are semi-structured document type data.
+Each record type can be evolved based on the business goal (i.e. keys can be added to the json)
+These Golden Records have to be enriched, developed and transformed based on the business requirement and to achieve this, MongoDB has a sophisticated query strength.
+ 
+<hr>
 
 ## Golden Records 
 
@@ -43,7 +51,7 @@ This master spider create metadata file for all workers.
 
 ```
 
-### Courcses
+### Courses
 
 ```
 {
@@ -64,20 +72,16 @@ This master spider create metadata file for all workers.
   "currency": "eur",
   "deparment": "computing",
   "dpt_code": "",
-  "cources_code": "cs12391",
+  "courses-code": "cs12391",
   "univeristy_id": "UUID_1",
-  "courcse_url": "http://exsample.com/cources/cs12391",
-  "cources_type": "Bsc",
+  "courses_url": "http://exsample.com/cources/cs12391",
+  "courses_type": "Bsc",
   "mode_of_study": "full_time"
 }
 
 ```
 
-mongodb select as a datastore.
-Reasons:
- - The semi-stuctured data format is more suitable for this type of cases.
- - Accoding to that this data structure act as doucment type data.
- - This is not more ETL process. Accoding to buiness and markeinting goals we have to change and enrich those golden records .So mongodb has inclued sophosticated query power for that.
+#### How to excute 
 
 
 
