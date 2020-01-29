@@ -22,52 +22,51 @@ This master spider create metadata file for all workers.
 
 ```
 {
-"id":UUID_1,
-"source_type":"web",
-"source_name":"example",
-"source_domain":""http://example.com/"
-"region":"uk",
-"type":"univerity",
-"display_name":"Univeristy of ABC",
-"name":"univerity_of_abc",
-"number_of_dpt" :15,
-"geo_location":{
-"lat":7.8221380123,
-"lon":65.238012921
-},
-"address":"",
-"contact_no":"
-"
-"
+  "id": "UUID_1",
+  "source_type": "web",
+  "source_name": "example",
+  "source_domain": "http://example.com/",
+  "region": "uk",
+  "type": "univerity",
+  "display_name": "Univeristy of ABC",
+  "name": "univerity_of_abc",
+  "number_of_dpt": 15,
+  "geo_location": {
+    "lat": 7.8221380123,
+    "lon": 65.238012921
+  },
+  "address": "",
+  "contact_no": ""
 }
+
 ```
 
 ### Courcses
 
 ```
 {
-"id":UUID_2,
-"source_type":"web",
-"source_name":"example",
-"source_domain":""http://exsample.com/"
-"type":"cources",
-"region":"uk",
-"name":"coputer_science",
-"display_name":"Computer Science",
-"duration":{  
-"y":1,
-"m":6,
-"d":0
-},
-"fee":"",
-"currency":"eur",
-"deparment":"computing",
-"dpt_code":"",
-"cources_code":"cs12391",
-"univeristy_id": "UUID_1",
-"courcse_url":"http://exsample.com/cources/cs12391",
-"cources_type":"Bsc",
-"mode_of_study":"full_time"
+  "id": "UUID_2",
+  "source_type": "web",
+  "source_name": "example",
+  "source_domain": "http://exsample.com/",
+  "type": "cources",
+  "region": "uk",
+  "name": "coputer_science",
+  "display_name": "Computer Science",
+  "duration": {
+    "y": 1,
+    "m": 6,
+    "d": 0
+  },
+  "fee": "35000",
+  "currency": "eur",
+  "deparment": "computing",
+  "dpt_code": "",
+  "cources_code": "cs12391",
+  "univeristy_id": "UUID_1",
+  "courcse_url": "http://exsample.com/cources/cs12391",
+  "cources_type": "Bsc",
+  "mode_of_study": "full_time"
 }
 
 ```
