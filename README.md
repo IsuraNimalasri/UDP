@@ -22,7 +22,10 @@ This master spider create metadata file for all workers.
 
 ```
 {
-"id":UUID_1
+"id":UUID_1,
+"source_type":"web",
+"source_name":"example",
+"source_domain":""http://example.com/"
 "region":"uk",
 "type":"univerity",
 "display_name":"Univeristy of ABC",
@@ -41,8 +44,12 @@ This master spider create metadata file for all workers.
 
 ### Courcses
 
-```{
+```
+{
 "id":UUID_2,
+"source_type":"web",
+"source_name":"example",
+"source_domain":""http://exsample.com/"
 "type":"cources",
 "region":"uk",
 "name":"coputer_science",
@@ -61,9 +68,14 @@ This master spider create metadata file for all workers.
 "courcse_url":"http://exsample.com/cources/cs12391",
 "cources_type":"Bsc",
 "mode_of_study":"full_time"
-}```
+}
 
-
+```
+mongodb select as a datastore.
+Reasons:
+ - The semi-stuctured data format is more suitable for this type of cases.
+ - Accoding to that this data structure act as doucment type data.
+ - This is not more ETL process. Accoding to buiness and markeinting goals we have to change and enrich those golden records .So mongodb has inclued sophosticated query power for that.
 
 
 
