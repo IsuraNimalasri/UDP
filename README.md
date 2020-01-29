@@ -1,6 +1,6 @@
 # University Data Pipeline (UDP 1.0 )
 
-![](https://raw.githubusercontent.com/IsuraNimalasri/university/master/Pipeline.jpg?token=ACEWOAX5JYD3YKWFFCZDAJC6GHCT6)
+![pipeline](/Pipeline.jpg)
 
 This is very basic concept , I try to do. When we go through the diagram data flow start from sourcee where is our data scrapying form. Whe we come to scrapying area we create some logical grouping for spiders. each source has two type of spiders. 
 
@@ -8,9 +8,11 @@ This is very basic concept , I try to do. When we go through the diagram data fl
 - worker spider (multiple number of worker per sources)
 
 #### Master Spider 
+
 Master spider can create golden recodes which are Business and markeing team looking data. And also master spider should create metadata for workers.
 
 #### Worker Spider 
+
 There are multiple number of woker spiders in unders the single sourse. The are doing diffrent jobs using metadata.
 There are multiple websites can be source for our scraping engine.each web site has desicated master spider for crawling web data.
 This master spider create metadata file for all workers. 
