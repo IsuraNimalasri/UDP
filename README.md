@@ -83,10 +83,12 @@ These Golden Records have to be enriched, developed and transformed based on the
 
 #### How to excute 
 
--Before excete UDP you should install  `pip install scrapy`
--Step 1 Excute master spider  
+- Before excete UDP you should install  `pip install scrapy`
+
+- Step 1 Excute master spider  
 	`scrapy crawl master_1_uk`
--step 2 Excute worker spider
+	
+- step 2 Excute worker spider
 	`scrapy crawl worker_1_uk`
 
 
